@@ -1,5 +1,3 @@
-- ex1 para ex 10:
-Exercícios para aprendizagem de Shell Script
+-   ex1 to ex 10: Exercises for learning Shell Script
 
-- mudartudo.sh:
-um Shell Script para mudar todas as extensões de arquivos de uma pasta para ".sh".
+-   mudartudo.sh: a Shell Script to change all file extensions in a folder to ".sh".
