@@ -1,0 +1,1 @@
+Repository where I keep the exercises I did during the full stack development course at Trybe. #VQV 
