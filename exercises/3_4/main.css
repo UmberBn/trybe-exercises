@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+.nav-menu{
+    width: 60%;
+    text-align: end;
+}
+
+.nav-item{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: 3px;
+}
