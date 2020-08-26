@@ -44,7 +44,6 @@ span em{
 
 h2{
     font-size: 1.4rem;
-    margin: 10px 0px;
 }
 
 .general{
@@ -52,14 +51,14 @@ h2{
     margin: 0 auto;
 }
 
-.general .general-principal{
+.text-content{
     display: inline-block;
     text-align: justify;
     margin: 0px;
     margin-bottom: 20px;
 }
 
-h6{
+h3{
     display: none;
 }
 
@@ -68,4 +67,12 @@ h6{
     display: flex;
     justify-content: center;
 
+}
+
+footer{
+    border-top: 1px solid black;
+}
+
+.space-bottom{
+    margin-bottom: 1.4rem;
 }
