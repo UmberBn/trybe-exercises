@@ -26,7 +26,10 @@ h1{
 }
 
 .mantis{
+    display: block;
     text-align: center;
+    width: 90%;
+    float: left;
 }
 .mantis-picture{
     margin: 0 auto;
@@ -47,6 +50,7 @@ h2{
 }
 
 .general{
+    display: inline-block;
     width: 66%;
     margin: 0 auto;
 }
@@ -70,9 +74,24 @@ h3{
 }
 
 footer{
+    padding: 10px;
     border-top: 1px solid black;
 }
 
 .space-bottom{
     margin-bottom: 1.4rem;
+}
+
+.info-links{
+    display: block;
+    border: 1px solid black;
+    width: 9%;
+    float: right;
+}
+
+footer p{
+    clear: both;
+    margin: 0px;
+    text-align: center;
+    border-top: 1px solid black;
 }
