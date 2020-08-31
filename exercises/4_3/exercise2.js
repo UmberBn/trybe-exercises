@@ -3,6 +3,6 @@ let n = 5,
     aux = "*";
 
 
-for (i = 0; i < n; i += 1) {
+for (i = 1; i <= n; i += 1) {
     console.log(aux.repeat(i));
 }
