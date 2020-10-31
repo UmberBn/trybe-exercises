@@ -1,0 +1,97 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    border-bottom: 1px solid black;
+}
+
+
+h1{
+    text-align: center;
+}
+
+.nav-menu{
+    text-align: center;
+}
+
+.nav-item{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.mantis{
+    display: block;
+    text-align: center;
+    width: 90%;
+    float: left;
+}
+.mantis-picture{
+    margin: 0 auto;
+}
+
+.mantis-picture img{
+    display: inline-block;
+    width: 300px;
+}
+
+span em{
+    display: block;
+    font-size: .7rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+.general{
+    display: inline-block;
+    width: 66%;
+    margin: 0 auto;
+}
+
+.text-content{
+    display: inline-block;
+    text-align: justify;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+h3{
+    display: none;
+}
+
+.table-info{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer{
+    padding: 10px;
+    border-top: 1px solid black;
+}
+
+.space-bottom{
+    margin-bottom: 1.4rem;
+}
+
+.info-links{
+    display: block;
+    border: 1px solid black;
+    width: 9%;
+    float: right;
+}
+
+footer p{
+    clear: both;
+    margin: 0px;
+    text-align: center;
+    border-top: 1px solid black;
+}
