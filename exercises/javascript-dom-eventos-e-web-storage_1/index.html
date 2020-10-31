@@ -51,18 +51,28 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-        
+    // 1    
     function Trocaparagrafo(tagName, description){
       var parteUm = document.getElementsByTagName(tagName);
       parteUm[0].innerText = description;
     }
     Trocaparagrafo('p','tomara que eu esteja vivo')
     
+    /* 2 e 3 tem a mesma função como solução*/
     function backgroundColorChange(classDiv, color){
       var parteUm = document.getElementsByClassName(classDiv);
       parteUm[0].style.backgroundColor = color;
     }
     backgroundColorChange('main-content','rgb(76,164,109)')
+
+    backgroundColorChange('center-content','rgb(255,255,255)')
+    
+    //4
+    function correctingText(tagName, description){
+      var parteUm = document.getElementsByTagName(tagName);
+      parteUm[0].innerText = description;
+    }
+    correctingText('h1','Exercício 5.1 - JavaScript')
 
     </script>
   </body>
