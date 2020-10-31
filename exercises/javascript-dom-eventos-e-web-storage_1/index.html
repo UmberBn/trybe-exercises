@@ -1,79 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.1</title>
 
-    <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
-      .title {
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.1</title>
 
-      .main-content {
-        background-color: yellow;
-      }
+  <style>
+    div {
+      border-color: black;
+      border-style: solid;
+    }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin: 0 auto;
-      }
+    .title {
+      text-align: center;
+    }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
-    <div class="main-content">
-      <div class="center-content">
-        <p>Texto padrão do nosso site</p>
-        <p>-----</p>
-        <p>Trybe</p>
-      </div>
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+  <div class="main-content">
+    <div class="center-content">
+      <p>Texto padrão do nosso site</p>
+      <p>-----</p>
+      <p>Trybe</p>
     </div>
-    <script>
-        /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
-        - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
- Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
- Crie uma função que mude a cor do quadrado vermelho para branco.
- Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        */
+  </div>
+  <script>
+    /*
+    Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+    - document.getElementById()
+    - document.getElementsByClassName()
+    - document.getElementsByTagName()
+Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+Crie uma função que mude a cor do quadrado vermelho para branco.
+Crie uma função que corrija o texto da tag <h1>.
+Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+    */
     // 1    
-    function Trocaparagrafo(tagName, description){
-      var parteUm = document.getElementsByTagName(tagName);
+    function Trocaparagrafo(tagName, description) {
+      let parteUm = document.getElementsByTagName(tagName);
       parteUm[0].innerText = description;
     }
-    Trocaparagrafo('p','tomara que eu esteja vivo')
-    
+    Trocaparagrafo('p', 'tomara que eu esteja vivo')
+
     /* 2 e 3 tem a mesma função como solução*/
-    function backgroundColorChange(classDiv, color){
-      var parteUm = document.getElementsByClassName(classDiv);
+    function backgroundColorChange(classDiv, color) {
+      let parteUm = document.getElementsByClassName(classDiv);
       parteUm[0].style.backgroundColor = color;
     }
-    backgroundColorChange('main-content','rgb(76,164,109)')
+    backgroundColorChange('main-content', 'rgb(76,164,109)')
 
-    backgroundColorChange('center-content','rgb(255,255,255)')
-    
+    backgroundColorChange('center-content', 'rgb(255,255,255)')
+
     //4
-    function correctingText(tagName, description){
-      var parteUm = document.getElementsByTagName(tagName);
+    function correctingText(tagName, description) {
+      let parteUm = document.getElementsByTagName(tagName);
       parteUm[0].innerText = description;
     }
-    correctingText('h1','Exercício 5.1 - JavaScript')
+    correctingText('h1', 'Exercício 5.1 - JavaScript')
 
-    </script>
-  </body>
+    //5
+    function textToUpperCase(tagName) {
+      let parteUm = document.getElementsByTagName(tagName);
+      for (let i = 0; i < parteUm.length; i++) {
+        let aux = parteUm[i].innerText
+        parteUm[i].innerText = aux.toUpperCase();
+      }
+    }
+    textToUpperCase('p');
+
+    //6
+    function consoloLogFuction(tagName) {
+      let parteUm = document.getElementsByTagName(tagName);
+      for (let i = 0; i < parteUm.length; i++) {
+        let aux = parteUm[i].innerText
+        console.log(aux);
+      }
+    }
+
+  </script>
+</body>
+
 </html>
