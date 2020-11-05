@@ -22,17 +22,38 @@
   </div>
 </body>
 <script>
-  //Parte 1
-  var treinamento = document.querySelector('#elementoOndeVoceEsta')
+  /*Parte 1
+  let treinamento = document.querySelector('#elementoOndeVoceEsta')
   treinamento.parentNode.style.color = 'blue'
-  var treinamento2 = document.querySelector('#primeiroFilhoDoFilho')
+  let treinamento2 = document.querySelector('#primeiroFilhoDoFilho')
   treinamento2.innerHTML = "estou aqui!"
-  var treinamento3 = document.querySelector('#pai').firstElementChild
+  let treinamento3 = document.querySelector('#pai').firstElementChild
   treinamento.previousElementSibling
   treinamento.nextSibling
   treinamento.nextElementSibling
   treinamento3.lastElementChild.previousElementSibling
-  //
+  */
 
+  /*Parte 2
+  let selectedElement = document.querySelector('#elementoOndeVoceEsta').parentNode
+  let simblingElement = document.createElement('div')
+  simblingElement.innerText = "irmão"
+  selectedElement.appendChild(simblingElement)
+  
+  let selectedElement2 = document.querySelector('#elementoOndeVoceEsta')
+  let childElement = document.createElement('p')
+  childElement.innerText = "filho"
+  selectedElement2.appendChild(childElement)
+
+  let selectedElement3 = document.querySelector('#primeiroFilhoDoFilho')
+  let childElement2 = document.createElement('p')
+  childElement2.innerText = "filho"
+  selectedElement3.appendChild(childElement2)
+
+  let selectedElement4 = document.querySelector('#primeiroFilhoDoFilho').firstChild
+  let result = selectedElement4.parentNode.parentNode.nextElementSibling 
+  */
+
+  
 </script>
 </html>
