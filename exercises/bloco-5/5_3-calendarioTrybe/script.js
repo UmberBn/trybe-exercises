@@ -26,12 +26,25 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
     if (daysOfMonth == 24 || daysOfMonth == 25 || daysOfMonth == 31) {
         addElementDays.className = 'days holiday'
     }
-    if (daysOfMonth = 4 || daysOfMonth == 11 || daysOfMonth == 18 || daysOfMonth == 25) {
+    if (daysOfMonth == 4 || daysOfMonth == 11 || daysOfMonth == 18 || daysOfMonth == 25) {
         addElementDays.className = 'days friday'
     }
     addElementDays.innerHTML = daysOfMonth
     daysArray.appendChild(addElementDays)
 }
 
+
+function holidayDays(buttonName) {
+    let buttonLocal = document.getElementsByClassName('buttons-container')
+    let addButton = document.createElement('button');
+    addButton.innerText = buttonName;
+    addButton.setAttribute('id', 'btn-holiday')
+    for (let index = 0; index < buttonLocal.length; index += 1) {
+        buttonLocal[index].appendChild(addButton)
+    }
+
+}
+
+holidayDays('Feriado')
 
 
