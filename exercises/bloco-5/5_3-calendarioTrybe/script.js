@@ -76,3 +76,21 @@ function fridayButton(buttonName) {
 }
 
 fridayButton('Sextou!')
+
+let clickFriday = document.getElementById('btn-friday');
+clickFriday.addEventListener('click', changeTextFriday);
+let aux = [];
+function changeTextFriday() {
+    let fridayDays = document.getElementsByClassName('friday')
+    for (let index = 0; index < fridayDays.length; index += 1) {
+       
+        if (fridayDays[index].innerText != 'Sextou!') {
+            aux.push(fridayDays[index].innerHTML)
+            fridayDays[index].innerText = "Sextou!"
+            fridayDays[index].style.color = "cyan"
+        }
+        else {
+            fridayDays[index].innerHTML = aux[index]
+        }
+    }
+}
