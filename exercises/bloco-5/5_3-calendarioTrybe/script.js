@@ -34,7 +34,7 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 }
 
 
-function holidayDays(buttonName) {
+function holidayButton(buttonName) {
     let buttonLocal = document.getElementsByClassName('buttons-container')
     let addButton = document.createElement('button');
     addButton.innerText = buttonName;
@@ -45,7 +45,7 @@ function holidayDays(buttonName) {
 
 }
 
-holidayDays('Feriado')
+holidayButton('Feriado')
 
 let clickHoliday = document.getElementById('btn-holiday')
 clickHoliday.addEventListener('click', changeHolidayClick)
@@ -53,7 +53,6 @@ clickHoliday.addEventListener('click', changeHolidayClick)
 function changeHolidayClick() {
     let holidayCurrentColor = document.getElementsByClassName('holiday')
     for (let index = 0; index < holidayCurrentColor.length; index += 1) {
-        console.log(holidayCurrentColor[index].style.backgroundColor)
         if (holidayCurrentColor[index].style.backgroundColor == "rgb(238, 238, 238)" || holidayCurrentColor[index].style.backgroundColor == '') {
             holidayCurrentColor[index].style.backgroundColor = "rgb(20, 184, 20)"
             holidayCurrentColor[index].style.color = "white"
@@ -65,3 +64,15 @@ function changeHolidayClick() {
     }
 }
 
+function fridayButton(buttonName) {
+    let buttonLocal = document.getElementsByClassName('buttons-container')
+    let addButton = document.createElement('button');
+    addButton.innerText = buttonName;
+    addButton.setAttribute('id', 'btn-friday')
+    for (let index = 0; index < buttonLocal.length; index += 1) {
+        buttonLocal[index].appendChild(addButton)
+    }
+
+}
+
+fridayButton('Sextou!')
