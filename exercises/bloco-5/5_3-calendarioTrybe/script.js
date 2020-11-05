@@ -24,10 +24,10 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
     let addElementDays = document.createElement('li')
     addElementDays.className = 'days'
     if (daysOfMonth == 24 || daysOfMonth == 25 || daysOfMonth == 31) {
-        addElementDays.className = 'days holiday'
+        addElementDays.classList.add('holiday')
     }
     if (daysOfMonth == 4 || daysOfMonth == 11 || daysOfMonth == 18 || daysOfMonth == 25) {
-        addElementDays.className = 'days friday'
+        addElementDays.classList.add('friday')
     }
     addElementDays.innerHTML = daysOfMonth
     daysArray.appendChild(addElementDays)
@@ -47,4 +47,21 @@ function holidayDays(buttonName) {
 
 holidayDays('Feriado')
 
+let clickHoliday = document.getElementById('btn-holiday')
+clickHoliday.addEventListener('click', changeHolidayClick)
+
+function changeHolidayClick() {
+    let holidayCurrentColor = document.getElementsByClassName('holiday')
+    for (let index = 0; index < holidayCurrentColor.length; index += 1) {
+        console.log(holidayCurrentColor[index].style.backgroundColor)
+        if (holidayCurrentColor[index].style.backgroundColor == "rgb(238, 238, 238)" || holidayCurrentColor[index].style.backgroundColor == '') {
+            holidayCurrentColor[index].style.backgroundColor = "rgb(20, 184, 20)"
+            holidayCurrentColor[index].style.color = "white"
+        }
+        else {
+            holidayCurrentColor[index].style.backgroundColor = "rgb(238, 238, 238)"
+            holidayCurrentColor[index].style.color = "#777"
+        }
+    }
+}
 
