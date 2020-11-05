@@ -83,7 +83,7 @@ let aux = [];
 function changeTextFriday() {
     let fridayDays = document.getElementsByClassName('friday')
     for (let index = 0; index < fridayDays.length; index += 1) {
-       
+
         if (fridayDays[index].innerText != 'Sextou!') {
             aux.push(fridayDays[index].innerHTML)
             fridayDays[index].innerText = "Sextou!"
@@ -94,3 +94,16 @@ function changeTextFriday() {
         }
     }
 }
+
+function zoomEffect() {
+    let mouseHover = document.querySelectorAll('.days')
+    for (index = 0; index < mouseHover.length; index += 1) {
+        mouseHover[index].addEventListener('mouseover', function (event) {
+            event.target.style.fontSize = "25px"
+        })
+        mouseHover[index].addEventListener('mouseout',function(event){
+            event.target.style.fontSize = ""})
+    }
+}
+
+zoomEffect()
