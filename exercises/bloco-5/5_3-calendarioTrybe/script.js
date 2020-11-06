@@ -101,9 +101,64 @@ function zoomEffect() {
         mouseHover[index].addEventListener('mouseover', function (event) {
             event.target.style.fontSize = "25px"
         })
-        mouseHover[index].addEventListener('mouseout',function(event){
-            event.target.style.fontSize = ""})
+        mouseHover[index].addEventListener('mouseout', function (event) {
+            event.target.style.fontSize = ""
+        })
     }
 }
 
 zoomEffect()
+
+
+function newTask(task) {
+    let tasksContainer = document.querySelector('.my-tasks');
+    let nameTask = document.createElement('span')
+    nameTask.innerText = task
+    tasksContainer.appendChild(nameTask)
+}
+
+newTask('Cozinhar')
+
+function taskBackground(color) {
+    let taskName = document.querySelector('.my-tasks')
+    let subtitle = document.createElement('div')
+    subtitle.className = 'task'
+    subtitle.style.backgroundColor = color
+    taskName.appendChild(subtitle)
+}
+
+taskBackground('green')
+
+function taskSelect() {
+    let taskSelected = document.getElementsByClassName('task selected')
+    let task = document.querySelector('.task')
+
+    task.addEventListener('click', function (event) {
+        if (taskSelected.length === 0) {
+            event.target.className = "task selected"
+        }
+        else { event.target.className = "task" }
+    })
+
+}
+
+taskSelect()
+
+function setDayColor() {
+    let day = document.querySelector('#days')
+    let taskSelected = document.getElementsByClassName('task selected')
+    let task = document.querySelector('.task')
+    let backgroundChange = task.style.backgroundColor
+
+    day.addEventListener('click', function (event) {
+        let currentColor = event.target.style.color
+        if (taskSelected.length > 0 && currentColor != backgroundChange) {
+            let color = taskSelected[0].style.backgroundColor;
+            event.target.style.color = color;
+        }
+        else if (currentColor === backgroundChange && taskSelected.length !== 0) {
+            event.target.style.color = 'rgb(119,119,119)';}
+    })
+}
+
+setDayColor()

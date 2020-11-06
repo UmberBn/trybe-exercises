@@ -1,4 +1,4 @@
-let n = 7,
+let n = 9,
     i = 0,
     j = 0;
 let asteric = '*', word = '';
